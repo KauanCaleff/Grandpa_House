@@ -8,8 +8,9 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] private string nomedoLevelDeJogo;
     [SerializeField] private GameObject painelMenuPrincipal;
-    //[SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private GameObject painelMenuOpcoes;
     [SerializeField] private GameObject painelSair;
+    [SerializeField] private GameObject painelTutorial;
 
     void Update()
     {
@@ -23,17 +24,17 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(nomedoLevelDeJogo);
     }
 
-    /*public void AbrirOpcoes()
+    public void AbrirOpcoes()
     {
         painelMenuPrincipal.SetActive(false);
-        //painelOpcoes.SetActive(true);
+        painelMenuOpcoes.SetActive(true);
     }
 
     public void Fecharopcoes()
     {
-        //painelOpcoes.SetActive(false);
+        painelMenuOpcoes.SetActive(false);
         painelMenuPrincipal.SetActive(true);
-    }*/
+    }
 
     public void AbrirSair()
     {
@@ -50,5 +51,14 @@ public class MenuManager : MonoBehaviour
         painelMenuPrincipal.SetActive(true);
         painelSair.SetActive(false);
     }
-
+    public void AbrirTutorial()
+    {
+        painelMenuOpcoes.SetActive(false);
+        painelTutorial.SetActive(true);
+    }
+    public void SairTutorial()
+    {
+        painelTutorial.SetActive(false);
+        painelMenuOpcoes.SetActive(true);
+    }
 }

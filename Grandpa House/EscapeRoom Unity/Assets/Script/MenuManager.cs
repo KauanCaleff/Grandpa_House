@@ -40,6 +40,7 @@ public class MenuManager : MonoBehaviour
     {
         painelSair.SetActive(true);
         painelMenuPrincipal.SetActive(false);
+        painelMenuOpcoes.SetActive(false);
     }
     public void SairJogo()
     {

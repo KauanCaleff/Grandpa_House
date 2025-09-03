@@ -48,7 +48,7 @@
                 {
                     "name": "up",
                     "id": "b1676d93-5962-4bb6-9b53-15efff8bf26d",
-                    "path": "<SwitchProControllerHID>/buttonEast",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

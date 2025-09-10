@@ -10037,6 +10037,7 @@ GameObject:
   - component: {fileID: 1578544434}
   - component: {fileID: 1578544435}
   - component: {fileID: 1578544436}
+  - component: {fileID: 1578544437}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -10202,7 +10203,19 @@ MonoBehaviour:
     m_ActionId: a35f5eef-4768-4aad-ae5b-7ab0c25b50f6
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1578544437}
+        m_TargetAssemblyTypeName: MouseCamera, Assembly-CSharp
+        m_MethodName: OnLookEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 2c35d7dc-513f-4309-811f-55490c0fa397
     m_ActionName: Player/Look[/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 0
@@ -10223,14 +10236,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1578544434}
-  speed: 15
+  speed: 7
   gravity: -9.81
-  jumpHeight: 4
+  jumpHeight: 2
   groundMask:
     serializedVersion: 2
     m_Bits: 0
   groundCheck: {fileID: 1901784789}
   groundDistance: 0.4
+--- !u!114 &1578544437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578544429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f3d7f873b7c814daf7259267463e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sensitivity: 40
+  Camera: {fileID: 789423449}
 --- !u!1001 &1582507212
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8975,7 +8975,7 @@ MonoBehaviour:
   character: {fileID: 1578544434}
   speed: 7
   gravity: -9.81
-  jumpHeight: 2
+  jumpHeight: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 0
@@ -8993,7 +8993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f3d7f873b7c814daf7259267463e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensitivity: 40
+  Sensitivity: 5
   Camera: {fileID: 789423449}
 --- !u!1001 &1582507212
 PrefabInstance:

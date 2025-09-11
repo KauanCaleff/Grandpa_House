@@ -20,5 +20,10 @@ public class Keypad : MonoBehaviour
         }else{
             Ans.text = "ERROR  ";
         }
+        Invoke("Clear", 2.0f);
+    }
+    private void Clear()
+    {
+        Ans.text = "";
     }
 }

@@ -20,9 +20,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
     }
-   
+
     // Update is called once per frame
     void Update()
     {
@@ -53,4 +53,5 @@ public class PlayerController : MonoBehaviour
     {
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
+    
 }

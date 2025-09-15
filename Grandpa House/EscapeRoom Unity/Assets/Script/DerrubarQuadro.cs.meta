@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Grandpa House/EscapeRoom Unity/Assets/Script/DerrubarQuadro.cs.meta
 guid: cfd7af7580c2ac3428412f61aa645db7
+========
+guid: dc72a13790073e447854377881b928b7
+>>>>>>>> 39b66f8899b10aa904a060f32f0561afbcd47323:Grandpa House/EscapeRoom Unity/Assets/Script/InicialMenu.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

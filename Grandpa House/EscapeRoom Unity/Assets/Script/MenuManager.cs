@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-
+    [SerializeField] private string CutsceneInicial;
     [SerializeField] private string nomedoLevelDeJogo;
     [SerializeField] private GameObject painelMenuPrincipal;
     [SerializeField] private GameObject painelMenuOpcoes;
@@ -22,6 +22,10 @@ public class MenuManager : MonoBehaviour
     public void Jogar()
     {
         SceneManager.LoadScene(nomedoLevelDeJogo);
+    }
+    public void Play()
+    {
+        SceneManager.LoadScene(CutsceneInicial);
     }
 
     public void AbrirOpcoes()

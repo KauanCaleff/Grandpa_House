@@ -15,7 +15,4 @@ public class RandomizeChildren : MonoBehaviour
             transform.GetChild(newSpot).position = temp;
         }
     }
-
-
-
 }

@@ -1,7 +1,0 @@
-<Project>
-  <PropertyGroup>
-    <!-- Redireciona os outputs do MSBuild para fora da pasta Assets -->
-    <BaseIntermediateOutputPath>$(SolutionDir)BuildOutput\obj\</BaseIntermediateOutputPath>
-    <BaseOutputPath>$(SolutionDir)BuildOutput\bin\</BaseOutputPath>
-  </PropertyGroup>
-</Project>

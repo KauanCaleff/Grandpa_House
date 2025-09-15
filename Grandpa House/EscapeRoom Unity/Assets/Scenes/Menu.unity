@@ -1246,7 +1246,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1993389592}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Jogar
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1309,7 +1309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &590610759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2154,7 +2154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1337214579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3305,6 +3305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a3546f12332cc40a422aa340c6fa16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CutsceneInicial: CutSceneInicial
   nomedoLevelDeJogo: SceneGame
   painelMenuPrincipal: {fileID: 1337214578}
   painelMenuOpcoes: {fileID: 590610758}

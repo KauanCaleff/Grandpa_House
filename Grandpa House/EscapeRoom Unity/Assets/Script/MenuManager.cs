@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] private string CutsceneInicial;
     [SerializeField] private string nomedoLevelDeJogo;
+    [SerializeField] private string MenuOpcoes;
     [SerializeField] private GameObject painelMenuPrincipal;
     [SerializeField] private GameObject painelMenuOpcoes;
     [SerializeField] private GameObject painelSair;
@@ -22,6 +23,10 @@ public class MenuManager : MonoBehaviour
     public void Jogar()
     {
         SceneManager.LoadScene(nomedoLevelDeJogo);
+    }
+    public void MenuOp()
+    {
+        SceneManager.LoadScene(MenuOpcoes);
     }
     public void Play()
     {

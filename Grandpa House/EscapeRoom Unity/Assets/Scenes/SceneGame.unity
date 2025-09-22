@@ -11645,7 +11645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1578544434}
-  speed: 15
+  speed: 5
   gravity: -9.81
   jumpHeight: 4
   groundMask:
@@ -11665,7 +11665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546d808cc666ab043a0656af4d6f27c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensitivity: 20
+  Sensitivity: 10
   Camera: {fileID: 789423449}
 --- !u!1001 &1582507212
 PrefabInstance:

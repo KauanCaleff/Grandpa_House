@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    private IInteractable interactableInstance;
     public CharacterController character;
     public float speed = 5f;
     public float gravity = -9.81f;
@@ -52,5 +53,20 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+    }
+    public void OnTryInteract(InputAction.CallbackContext value)
+    {
+        if(interactableInstance != null)
+        {
+            interactableInstance.InteractableLogic();
+        }
+    }
+    public void SetIInteractable(IInteractable interactable)
+    {
+        interactableInstance = interactable;
+    }
+    public void ClearIInstance()
+    {
+        interactableInstance = null;
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-/*interface IInteractable
+/*1interface IInteractable
 {
     public void IInteract();
 }*/
@@ -21,16 +21,42 @@ public class PlayerInteractionsManager : MonoBehaviour
     {
         interactionInputAction.action.performed -= Interact;
     }
+    private void Update()
+    {
+        CheckInteract();
+    }
+    private void CheckInteract()
+    {
+        Ray playerAim = new Ray(InteractionsSouce.position, InteractionsSouce.forward);
+        if (Physics.Raycast(playerAim, out RaycastHit hitinfo, InteractionRange))
+        {
+            if (hitinfo.collider.TryGetComponent(out IInteractable interactableObj))
+            {
+                Uimanager.Instance.SetHandCursor(true);  // Mostra cursor
+                return;
+            }
+        }
+        Uimanager.Instance.SetHandCursor(false);
+    }
 
     private void Interact(InputAction.CallbackContext obj)
     {
         Ray playerAim = new Ray(InteractionsSouce.position, InteractionsSouce.forward);
         if(Physics.Raycast(playerAim, out RaycastHit hitinfo, InteractionRange))
         {
+            if(hitinfo.collider != null)
+            {
+                Uimanager.Instance.SetHandCursor(true);
+            }
+            else
+            {
+                Uimanager.Instance.SetHandCursor(false);
+            }
             if(hitinfo.collider.TryGetComponent(out IInteractable interactableObj))
             {
                 interactableObj.IInteract();
             }
         }
+        Uimanager.Instance.SetHandCursor(false);
     }
 }

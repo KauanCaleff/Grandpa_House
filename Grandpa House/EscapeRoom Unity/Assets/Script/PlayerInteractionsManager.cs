@@ -44,19 +44,11 @@ public class PlayerInteractionsManager : MonoBehaviour
         Ray playerAim = new Ray(InteractionsSouce.position, InteractionsSouce.forward);
         if(Physics.Raycast(playerAim, out RaycastHit hitinfo, InteractionRange))
         {
-            if(hitinfo.collider != null)
-            {
-                Uimanager.Instance.SetHandCursor(true);
-            }
-            else
-            {
-                Uimanager.Instance.SetHandCursor(false);
-            }
             if(hitinfo.collider.TryGetComponent(out IInteractable interactableObj))
             {
                 interactableObj.IInteract();
             }
         }
-        Uimanager.Instance.SetHandCursor(false);
+        
     }
 }

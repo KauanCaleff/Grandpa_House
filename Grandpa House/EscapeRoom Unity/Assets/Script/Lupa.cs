@@ -41,7 +41,7 @@ public class Lupa : MonoBehaviour, IInteractable
         }
     }
 
-    public void InteractableLogic()
+    public void IInteract()
     {
         InteragirLupa();
     }

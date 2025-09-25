@@ -11602,6 +11602,7 @@ GameObject:
   - component: {fileID: 1578544435}
   - component: {fileID: 1578544436}
   - component: {fileID: 1578544437}
+  - component: {fileID: 1578544438}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -11837,6 +11838,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sensitivity: 10
   Camera: {fileID: 789423449}
+--- !u!114 &1578544438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578544429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad01d07d8b389c448b885c7aed45b00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractionsSouce: {fileID: 789423449}
+  InteractionRange: 20000
+  interactionInputAction: {fileID: -8721875695250746489, guid: 5557c0bedf738be488f413e34dfb7efc, type: 3}
 --- !u!1001 &1582507212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12697,18 +12713,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c13573dcd6936fb4ea2c7a27e6eeb289, type: 3}
   m_PrefabInstance: {fileID: 1633932907}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1665441486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665441485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 711320bdb6fb5844dbcdf8ffb09243c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1665441488
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12738,6 +12742,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14274737, y: 0.057498932, z: 0.22952223}
   m_Center: {x: -0.0035975426, y: 0, z: 0}
+--- !u!114 &1665441490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665441485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e38816f3dd05f1449727b0c547f5ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1695802656
 PrefabInstance:
   m_ObjectHideFlags: 0

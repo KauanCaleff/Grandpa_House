@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     {
         if(interactableInstance != null)
         {
-            interactableInstance.InteractableLogic();
+            interactableInstance.IInteract();
         }
     }
     public void SetIInteractable(IInteractable interactable)

@@ -7,5 +7,5 @@ public class Item : ScriptableObject
 {
     public bool grabbable;
     //audio
-    public string Text;
+    public string name;
 }

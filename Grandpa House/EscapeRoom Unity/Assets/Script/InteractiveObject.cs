@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour, IInteractable
 {
-    public Item item;
+    [SerializeField]private ScriptableObject scriptableObject;
+
     public void IInteract()
     {
-        Debug.Log("Oi");
+        if(scriptableObject.name == "Caixa")
+        {
+            Destroy(gameObject);
+        } 
     }
 }

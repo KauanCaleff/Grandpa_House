@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour, IInteractable
 {
+    /// EXEMPLOOOOOO/// USAR DE MODELO NO SCRIPT DO OBJETO
     [SerializeField]private ScriptableObject scriptableObject;
 
     public void IInteract()

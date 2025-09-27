@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Lupa
   m_EditorClassIdentifier: 
   grabbable: 1
-  Text: 
+  name: Lupa

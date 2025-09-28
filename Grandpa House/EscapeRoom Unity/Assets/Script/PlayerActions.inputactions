@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "FlashlightDrop",
+                    "type": "Button",
+                    "id": "b05779bb-773d-4de2-9815-c456a4c54a41",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -134,11 +143,22 @@
                 {
                     "name": "",
                     "id": "f6d9d337-f731-45de-9576-6f0c78bcb591",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Interagir",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "752a5463-090b-41f7-bde9-7038df7f5ada",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FlashlightDrop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

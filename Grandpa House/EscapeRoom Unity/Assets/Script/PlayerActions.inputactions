@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Inventario",
+                    "type": "Button",
+                    "id": "220ef31f-8b49-4273-be35-3e30c15d6551",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -153,12 +162,34 @@
                 },
                 {
                     "name": "",
+                    "id": "a47452fe-6899-417d-887c-ea5a6d9a5417",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interagir",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "752a5463-090b-41f7-bde9-7038df7f5ada",
                     "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "FlashlightDrop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "009204c8-461e-4ddb-9bd8-6a39d3247180",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inventario",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

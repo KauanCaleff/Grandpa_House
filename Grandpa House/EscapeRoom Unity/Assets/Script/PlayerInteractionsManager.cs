@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-/*1interface IInteractable
-{
-    public void IInteract();
-}*/
+
 public class PlayerInteractionsManager : MonoBehaviour
 {
     public Transform InteractionsSouce;
@@ -47,6 +44,7 @@ public class PlayerInteractionsManager : MonoBehaviour
             if(hitinfo.collider.TryGetComponent(out IInteractable interactableObj))
             {
                 interactableObj.IInteract();
+                
             }
         }
         

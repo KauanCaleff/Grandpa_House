@@ -8,7 +8,7 @@ public class Item : ScriptableObject
     public bool grabbable;
     //audio
     public string name;
-    [Header("Invetario")]
+    [Header("Inventario")]
     public bool InventarioItem;
     public string CollectMessage;
 }

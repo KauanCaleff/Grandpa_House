@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class Keypad : MonoBehaviour
+public class Keypad : MonoBehaviour, IInteractable
 {
+    [SerializeField]private ScriptableObject scriptableObject;
+    [SerializeField]private GameObject ImageKeypad;
     [SerializeField]private TextMeshProUGUI Ans;
     private string answer = "1412";
-
+    
+    public void IInteract()
+    {
+        ImageKeypad.SetActive(true);
+    }
     public void Number(int number)
     {
         Ans.text += number.ToString();

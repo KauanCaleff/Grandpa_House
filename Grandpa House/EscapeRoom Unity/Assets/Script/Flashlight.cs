@@ -16,8 +16,11 @@ public class Flashlight : MonoBehaviour, IInteractable
 
     public bool equipped;
 
+    private Vector3 initialPosition;
+
     void Start()
     {
+        initialPosition = transform.position;
         if(!equipped)
         {
             rb.isKinematic = false;

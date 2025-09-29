@@ -48,7 +48,7 @@ public class MenuManager : MonoBehaviour
     public void AbrirSair()
     {
         painelSair.SetActive(true);
-        painelMenuPrincipal.SetActive(false);
+        //painelMenuPrincipal.SetActive(false);
         painelMenuOpcoes.SetActive(false);
     }
     public void SairJogo()
@@ -56,9 +56,14 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void AbrirMenu()
+    public void AbrirMenuPrincipal()
     {
         painelMenuPrincipal.SetActive(true);
+        painelSair.SetActive(false);
+    }
+    public void AbrirMenuOp()
+    {
+        painelMenuOpcoes.SetActive(true);
         painelSair.SetActive(false);
     }
     public void AbrirTutorial()

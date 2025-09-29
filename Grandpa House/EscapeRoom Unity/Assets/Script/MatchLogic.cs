@@ -11,6 +11,8 @@ public class MatchLogic : MonoBehaviour
     public Text pointsText;
     public GameObject levelCompletedUI;
     private int points=0;
+    
+    public GameObject luzes;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class MatchLogic : MonoBehaviour
         pointsText.text = points + "/" + maxPoints;
         if (points == maxPoints){
             levelCompletedUI.SetActive(true);
+            luzes.SetActive(true);
         }
     }
 

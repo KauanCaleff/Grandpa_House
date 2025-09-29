@@ -52,7 +52,7 @@ public class Flashlight : MonoBehaviour, IInteractable
         coll.isTrigger = true;
 
         transform.SetParent(camera);
-        transform.localPosition = new Vector3(0.598f, -0.188f, 0.653f); // ajuste conforme necessário
+        transform.localPosition = new Vector3(0.598f, -0.188f, 0.653f); 
         transform.localRotation = Quaternion.Euler(90f, 0f, 0f);
     }
 

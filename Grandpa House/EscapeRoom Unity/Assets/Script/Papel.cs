@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Papel : MonoBehaviour
+public class Papel : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]private ScriptableObject scriptableObject;
+    public GameObject PapelPImage;
 
-    // Update is called once per frame
-    void Update()
+    public void IInteract()
     {
-        
+        if(scriptableObject.name == "Papel")
+        {
+            PapelPImage.SetActive(true);
+            //Destroy(gameObject);
+        } 
     }
 }

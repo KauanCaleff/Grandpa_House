@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Papel
   m_EditorClassIdentifier: 
   grabbable: 0
-  name: 
+  name: Papel
   InventarioItem: 0
   CollectMessage: 

@@ -22,7 +22,7 @@ public class MatchLogic : MonoBehaviour
     void UpdatePotinsText(){
         pointsText.text = points + "/" + maxPoints;
         if (points == maxPoints){
-            levelCompletedUI.SetActive(true);
+            levelCompletedUI.SetActive(false);
             luzes.SetActive(true);
         }
     }

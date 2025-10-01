@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Lupa : MonoBehaviour, IInteractable
 {
-    [SerializeField] private ScriptableObject scriptableObject;
+    [SerializeField] private Item itemData;
+    [SerializeField] private Inventario inventarioitem;
 
     public void IInteract()
     {
-        if (scriptableObject.name == "Lupa")
+        if (itemData.name == "Lupa")
         {
+            inventarioitem.AddItem(itemData);
             Debug.Log("oi");
+
         }
     }
 }

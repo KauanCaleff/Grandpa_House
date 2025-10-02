@@ -43,7 +43,8 @@ public class Safe : MonoBehaviour
     {
         if (input == code)
         {
-            obj.SetActive(true);
+            if (obj)
+                obj.SetActive(true);
             uiText.color = Color.green;
             Open();
         }

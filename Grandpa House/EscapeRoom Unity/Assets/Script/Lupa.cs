@@ -5,13 +5,13 @@ using UnityEngine;
 public class Lupa : MonoBehaviour, IInteractable
 {
     [SerializeField] private Item itemData;
-    [SerializeField] private Inventario inventarioitem;
+    public bool LupaOn = false;
 
     public void IInteract()
     {
         if (itemData.name == "Lupa")
         {
-            inventarioitem.AddItem(itemData);
+            LupaOn = true;
             Debug.Log("oi");
 
         }

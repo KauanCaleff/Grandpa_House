@@ -6,13 +6,24 @@ public class Papel : MonoBehaviour, IInteractable
 {
     [SerializeField]private ScriptableObject scriptableObject;
     public GameObject PapelPImage;
-
+    public GameObject PapelGImage;
+    public Lupa Lupa;
+    public bool interagindo;
     public void IInteract()
     {
         if(scriptableObject.name == "Papel")
         {
-            PapelPImage.SetActive(true);
-            //Destroy(gameObject);
-        } 
+  
+            if (Lupa.LupaOn == false)
+            {
+                PapelPImage.SetActive(true);
+                    Debug.Log("PAPELLLLLL");
+                }
+                else
+                {
+                    PapelGImage.SetActive(true);
+                }
+            
+        }
     }
 }

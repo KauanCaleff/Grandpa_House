@@ -1277,6 +1277,7 @@ GameObject:
   - component: {fileID: 1963361748}
   - component: {fileID: 1963361750}
   - component: {fileID: 1963361749}
+  - component: {fileID: 1963361751}
   m_Layer: 0
   m_Name: NextScene
   m_TagString: Untagged
@@ -1342,3 +1343,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneGame: SceneGame
+--- !u!320 &1963361751
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963361747}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: f0daa78b856200f44901f583c8f9490b, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []

@@ -13,24 +13,11 @@ public class Uimanager : MonoBehaviour
     public GameObject invetarioImage;
     public TextMeshProUGUI[] invetarioItens;
     public TextMeshProUGUI infoText;
-    private Inventario inventario;
     public InputActionReference interactionInputAction;
 
     private void Awake()
     {
         Instance = this;
-        inventario = GetComponent<Inventario>();
-    }
-    
-
-    private void OnEnable()
-    {
-        interactionInputAction.action.performed += InventarioI;
-    }
-
-    private void OnDisable()
-    {
-        interactionInputAction.action.performed -= InventarioI;
     }
     // Start is called before the first frame update
     void Start()
@@ -42,17 +29,6 @@ public class Uimanager : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void InventarioI(InputAction.CallbackContext inv)
-    {
-        invetarioImage.SetActive(!invetarioImage.activeInHierarchy);
-    }
-    public void SetItens(Item item, int index)
-    {
-        invetarioItens[index].text = item.CollectMessage;
-        infoText.text = item.CollectMessage;
-        Debug.Log(infoText);
     }
     public void SetHandCursor(bool state)
     {

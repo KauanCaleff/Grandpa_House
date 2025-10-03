@@ -57,4 +57,6 @@ public class Uimanager : MonoBehaviour
     {
         handCursor.SetActive(state);
     }
+
+    
 }

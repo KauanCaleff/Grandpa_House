@@ -15546,7 +15546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711320bdb6fb5844dbcdf8ffb09243c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 11400000, guid: 54e5900d662d49743b3e98d032b65382, type: 2}
+  itemData: {fileID: 11400000, guid: 54e5900d662d49743b3e98d032b65382, type: 2}
+  inventarioitem: {fileID: 1578544439}
 --- !u!1001 &1688314741
 PrefabInstance:
   m_ObjectHideFlags: 0

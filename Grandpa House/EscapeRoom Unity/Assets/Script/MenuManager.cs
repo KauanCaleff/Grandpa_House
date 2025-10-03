@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject painelMenuOpcoes;
     [SerializeField] private GameObject painelSair;
     [SerializeField] private GameObject painelTutorial;
+    [SerializeField] private GameObject pause;
 
     void Update()
     {
@@ -24,10 +25,10 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(nomedoLevelDeJogo);
     }
-    public void MenuOp()
+    /*public void MenuOp()
     {
         SceneManager.LoadScene(MenuOpcoes);
-    }
+    }*/
     public void Play()
     {
         SceneManager.LoadScene(CutsceneInicial);
@@ -63,8 +64,10 @@ public class MenuManager : MonoBehaviour
     }
     public void AbrirMenuOp()
     {
+        Time.timeScale = 0;
         painelMenuOpcoes.SetActive(true);
         painelSair.SetActive(false);
+        pause.SetActive(false);
     }
     public void AbrirTutorial()
     {
@@ -75,5 +78,13 @@ public class MenuManager : MonoBehaviour
     {
         painelTutorial.SetActive(false);
         painelMenuOpcoes.SetActive(true);
+    }
+
+    public void SairPause()
+    {
+        Time.timeScale = 1; //rodando
+        painelMenuOpcoes.SetActive(false);
+        pause.SetActive(true);
+
     }
 }

@@ -9,6 +9,7 @@ public class Uimanager : MonoBehaviour
 {
     public static Uimanager Instance;
     public GameObject handCursor;
+    public GameObject Interagirbutton;
     public GameObject invetarioImage;
     public TextMeshProUGUI[] invetarioItens;
     public TextMeshProUGUI infoText;
@@ -51,12 +52,14 @@ public class Uimanager : MonoBehaviour
     {
         invetarioItens[index].text = item.CollectMessage;
         infoText.text = item.CollectMessage;
-        //StartCoroutine(FadingText());
+        Debug.Log(infoText);
     }
     public void SetHandCursor(bool state)
     {
         handCursor.SetActive(state);
     }
-
-    
+    public void SetInteragir(bool state)
+    {
+        Interagirbutton.SetActive(state);
+    }
 }

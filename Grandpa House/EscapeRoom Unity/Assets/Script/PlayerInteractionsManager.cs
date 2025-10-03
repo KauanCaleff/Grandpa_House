@@ -30,10 +30,12 @@ public class PlayerInteractionsManager : MonoBehaviour
             if (hitinfo.collider.TryGetComponent(out IInteractable interactableObj))
             {
                 Uimanager.Instance.SetHandCursor(true);  // Mostra cursor
+                Uimanager.Instance.SetInteragir(true);
                 return;
             }
         }
         Uimanager.Instance.SetHandCursor(false);
+        Uimanager.Instance.SetInteragir(false);
     }
 
     private void Interact(InputAction.CallbackContext obj)

@@ -7,6 +7,7 @@ public class PlayerInteractionsManager : MonoBehaviour
 {
     public Transform InteractionsSouce;
     public float InteractionRange;
+    public bool interagindo;
     public InputActionReference interactionInputAction;
 
     private void OnEnable()
@@ -31,11 +32,13 @@ public class PlayerInteractionsManager : MonoBehaviour
             {
                 Uimanager.Instance.SetHandCursor(true);  // Mostra cursor
                 Uimanager.Instance.SetInteragir(true);
+                interagindo = true;
                 return;
             }
         }
         Uimanager.Instance.SetHandCursor(false);
         Uimanager.Instance.SetInteragir(false);
+        interagindo=false;
     }
 
     private void Interact(InputAction.CallbackContext obj)
@@ -46,7 +49,6 @@ public class PlayerInteractionsManager : MonoBehaviour
             if(hitinfo.collider.TryGetComponent(out IInteractable interactableObj))
             {
                 interactableObj.IInteract();
-                
             }
         }
         

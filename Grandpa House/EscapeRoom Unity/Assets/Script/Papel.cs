@@ -8,22 +8,40 @@ public class Papel : MonoBehaviour, IInteractable
     public GameObject PapelPImage;
     public GameObject PapelGImage;
     public Lupa Lupa;
-    public bool interagindo;
+    public PlayerInteractionsManager playerInteractionsManager;
+    public bool PapelAberto;
     public void IInteract()
     {
-        if(scriptableObject.name == "Papel")
+        if(scriptableObject.name == "Papel" && playerInteractionsManager.interagindo)
         {
-  
-            if (Lupa.LupaOn == false)
-            {
-                PapelPImage.SetActive(true);
-                    Debug.Log("PAPELLLLLL");
-                }
-                else
-                {
-                    PapelGImage.SetActive(true);
-                }
-            
+            InteragirLupa();
         }
+       
+    }
+    void Update()
+    {
+        if (PapelAberto && !playerInteractionsManager.interagindo)
+        {
+            NaoInteragir();
+        }
+    }
+    public void InteragirLupa()
+    {
+        if(Lupa.LupaOn == false)
+        {
+            PapelPImage.SetActive(true);
+
+        }
+        else
+        {
+            PapelGImage.SetActive(true);
+        }
+        PapelAberto = true;
+    }
+    public void NaoInteragir()
+    {
+        PapelGImage.SetActive(false);
+        PapelPImage.SetActive(false);
+        PapelAberto = false;
     }
 }

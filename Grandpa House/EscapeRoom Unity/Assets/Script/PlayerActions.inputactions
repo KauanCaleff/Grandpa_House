@@ -49,15 +49,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Inventario",
-                    "type": "Button",
-                    "id": "220ef31f-8b49-4273-be35-3e30c15d6551",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -190,17 +181,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "FlashlightDrop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "009204c8-461e-4ddb-9bd8-6a39d3247180",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventario",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

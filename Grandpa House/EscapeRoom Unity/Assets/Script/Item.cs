@@ -6,9 +6,8 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     public bool grabbable;
-    //audio
+
     public string name;
-    [Header("Inventario")]
-    public bool InventarioItem;
-    public string CollectMessage;
+    [Header("Som")]
+    public string Audio;
 }

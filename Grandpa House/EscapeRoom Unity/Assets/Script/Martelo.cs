@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class Martelo : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Item itemData;
     [SerializeField]private ScriptableObject scriptableObject;
 
     public Rigidbody rb;
@@ -43,6 +42,7 @@ public class Martelo : MonoBehaviour, IInteractable
         {
             if (!equipped)
             PickUp();
+
         else
             Drop();
         } 

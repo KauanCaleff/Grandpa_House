@@ -27,7 +27,7 @@ public class Papel : MonoBehaviour, IInteractable
     }
     public void InteragirLupa()
     {
-        if(Lupa.LupaOn == false)
+        if(Lupa.equipped == false)
         {
             PapelPImage.SetActive(true);
 

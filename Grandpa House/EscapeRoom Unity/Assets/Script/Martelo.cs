@@ -57,7 +57,7 @@ public class Martelo : MonoBehaviour, IInteractable
 
         transform.SetParent(camera);
         transform.localPosition = new Vector3(0.598f, -0.188f, 0.653f); 
-        transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(180f, 0f, 0f);
     }
 
     void Drop()

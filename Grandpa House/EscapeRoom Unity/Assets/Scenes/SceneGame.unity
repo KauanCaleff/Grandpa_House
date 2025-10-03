@@ -1704,7 +1704,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Number
         m_Mode: 3
@@ -2283,7 +2283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &252473433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7482,7 +7482,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Number
         m_Mode: 3
@@ -8110,7 +8110,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Number
         m_Mode: 3
@@ -10923,7 +10923,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Number
         m_Mode: 3
@@ -11482,7 +11482,7 @@ Transform:
   - {fileID: 1192778171}
   - {fileID: 598731297}
   - {fileID: 1076582927}
-  - {fileID: 1752604035}
+  - {fileID: 1752604037}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14004,7 +14004,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Number
         m_Mode: 3
@@ -14650,7 +14650,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Number
         m_Mode: 3
@@ -15007,7 +15007,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Enter
         m_Mode: 1
@@ -16948,7 +16948,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Number
         m_Mode: 3
@@ -18526,11 +18526,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1752604035}
+  - component: {fileID: 1752604037}
   - component: {fileID: 1752604034}
   - component: {fileID: 1752604033}
   - component: {fileID: 1752604032}
   - component: {fileID: 1752604036}
+  - component: {fileID: 1752604038}
   m_Layer: 0
   m_Name: KeyPad
   m_TagString: Untagged
@@ -18571,7 +18572,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1634ce56583eeae43b299338b91f8503, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18601,21 +18602,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752604031}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1752604035
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752604031}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9562922, y: -0.045562744, z: -9.864602}
-  m_LocalScale: {x: 0.32647598, y: 0.5475, z: 0.200398}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1169243869}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1752604036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18631,6 +18617,34 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 53134682e8e849a4790be1be8660ce75, type: 2}
   ImageKeypad: {fileID: 158061462}
   Ans: {fileID: 1984338571}
+--- !u!224 &1752604037
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752604031}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -9.864602}
+  m_LocalScale: {x: 0.32647598, y: 0.5475, z: 0.200398}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1169243869}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.9562922, y: -0.045562744}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1752604038
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752604031}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1786079881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20066,7 +20080,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Number
         m_Mode: 3
@@ -21309,7 +21323,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059921242}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Keypad, Assembly-CSharp
         m_MethodName: Number
         m_Mode: 3
@@ -21751,7 +21765,6 @@ GameObject:
   - component: {fileID: 2059921239}
   - component: {fileID: 2059921241}
   - component: {fileID: 2059921240}
-  - component: {fileID: 2059921242}
   m_Layer: 5
   m_Name: KeyPad
   m_TagString: Untagged
@@ -21817,21 +21830,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059921238}
   m_CullTransparentMesh: 1
---- !u!114 &2059921242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059921238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e98f59c57a98243a182fc08b7be96a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 0}
-  ImageKeypad: {fileID: 0}
-  Ans: {fileID: 1984338571}
 --- !u!1001 &2064060864
 PrefabInstance:
   m_ObjectHideFlags: 0

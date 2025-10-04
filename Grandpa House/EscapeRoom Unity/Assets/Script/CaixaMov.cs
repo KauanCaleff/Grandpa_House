@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using FMODUnity;
+using FMODUnity;
 
 public class CaixaMov : MonoBehaviour, IInteractable
 {
@@ -14,12 +14,11 @@ public class CaixaMov : MonoBehaviour, IInteractable
     private bool isMoving = false;
     private bool isAtTarget = false;    // Verifica se está no destino
 
-    //private StudioEventEmitter emitter;
+    public StudioEventEmitter emitter;
 
     private void Start()
     {
         startPosition = transform.position;
-        //emitter = GetComponent<StudioEventEmitter>();
     }
     
     public void IInteract()
@@ -36,7 +35,7 @@ public class CaixaMov : MonoBehaviour, IInteractable
             }
 
             isAtTarget = !isAtTarget;
-            //emitter.Play();
+            emitter.Play();
         }
     }
 

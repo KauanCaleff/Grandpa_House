@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{931fe3d1-d055-4519-9859-8b705ba7759b}">
+		<property name="assetPath">
+			<value>quadro.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.19512471655328797</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{98945452-e3dc-4778-825e-3b3fc896b530}</destination>
+		</relationship>
+	</object>
+</objects>

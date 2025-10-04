@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{55b21488-9f40-4d72-960d-80b1581fc8a1}">
+		<property name="assetPath">
+			<value>caixa.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>88.1999969</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.5133560090702949</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{98945452-e3dc-4778-825e-3b3fc896b530}</destination>
+		</relationship>
+	</object>
+</objects>

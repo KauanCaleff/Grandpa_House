@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{68b70a23-a651-4c1e-a230-e6153a648c35}">
+		<property name="assetPath">
+			<value>eletricidade.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>198.82433106575965</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{98945452-e3dc-4778-825e-3b3fc896b530}</destination>
+		</relationship>
+	</object>
+</objects>

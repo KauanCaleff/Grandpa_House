@@ -2260,6 +2260,38 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 015035ab962da114a90f458e6d3218b5, type: 2}
   playerInteractionsManager: {fileID: 1578544438}
   martelo: {fileID: 1192778168}
+  emitter: {fileID: 248850074}
+--- !u!114 &248850074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248850069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 775950165
+      Data2: 1243034869
+      Data3: 117471419
+      Data4: -509803362
+    Path: event:/quadrooo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &251042611 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3492452526356931769, guid: 732bef5d5f763fc4eb8deb436a0715b1, type: 3}
@@ -8789,6 +8821,38 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 015035ab962da114a90f458e6d3218b5, type: 2}
   playerInteractionsManager: {fileID: 1578544438}
   martelo: {fileID: 1192778168}
+  emitter: {fileID: 871950001}
+--- !u!114 &871950001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871949996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 775950165
+      Data2: 1243034869
+      Data3: 117471419
+      Data4: -509803362
+    Path: event:/quadrooo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &872274577
 GameObject:
   m_ObjectHideFlags: 0
@@ -11909,11 +11973,43 @@ MonoBehaviour:
   dropForwardForce: 0.5
   dropUpwardForce: 14
   equipped: 0
+  emitter: {fileID: 1192778174}
 --- !u!4 &1192778171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 07d8ff49282bc1e448da2f088c57f512, type: 3}
   m_PrefabInstance: {fileID: 1192778161}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1192778174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192778162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1897476117
+      Data2: 1104963272
+      Data3: 2114924987
+      Data4: 2007126636
+    Path: event:/martelo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1194522497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12045,11 +12141,43 @@ MonoBehaviour:
   dropForwardForce: 0.5
   dropUpwardForce: 15
   equipped: 0
+  emitter: {fileID: 1201733313}
 --- !u!4 &1201733309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
   m_PrefabInstance: {fileID: 1786079881}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1201733313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201733294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1897476117
+      Data2: 1104963272
+      Data3: 2114924987
+      Data4: 2007126636
+    Path: event:/martelo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1207216659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12201,6 +12329,7 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 015035ab962da114a90f458e6d3218b5, type: 2}
   playerInteractionsManager: {fileID: 1578544438}
   martelo: {fileID: 1192778168}
+  emitter: {fileID: 1209045696}
 --- !u!65 &1209045693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12214,6 +12343,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7376842, y: 0.97929615, z: 0.248819}
   m_Center: {x: 0.0005741159, y: -0.000069564805, z: 0.12091328}
+--- !u!114 &1209045696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242088334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 775950165
+      Data2: 1243034869
+      Data3: 117471419
+      Data4: -509803362
+    Path: event:/quadrooo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1228113628 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6683863373998285094, guid: de9788876f67ee041939157bb153b79b, type: 3}
@@ -14490,6 +14650,38 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 015035ab962da114a90f458e6d3218b5, type: 2}
   playerInteractionsManager: {fileID: 1578544438}
   martelo: {fileID: 1192778168}
+  emitter: {fileID: 1455156544}
+--- !u!114 &1455156544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378475801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 775950165
+      Data2: 1243034869
+      Data3: 117471419
+      Data4: -509803362
+    Path: event:/quadrooo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1455903458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15159,6 +15351,38 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 015035ab962da114a90f458e6d3218b5, type: 2}
   playerInteractionsManager: {fileID: 1578544438}
   martelo: {fileID: 1192778168}
+  emitter: {fileID: 1493771839}
+--- !u!114 &1493771839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526037474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 775950165
+      Data2: 1243034869
+      Data3: 117471419
+      Data4: -509803362
+    Path: event:/quadrooo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1505077158
 GameObject:
   m_ObjectHideFlags: 0
@@ -17490,11 +17714,43 @@ MonoBehaviour:
   dropForwardForce: 0.5
   dropUpwardForce: 14
   equipped: 0
+  emitter: {fileID: 1665441494}
 --- !u!4 &1665441493 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c13573dcd6936fb4ea2c7a27e6eeb289, type: 3}
   m_PrefabInstance: {fileID: 1633932907}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1665441494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665441485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1344304929
+      Data2: 1148350920
+      Data3: 898572680
+      Data4: -586180249
+    Path: event:/lupa
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1688314741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18645,6 +18901,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752604031}
   m_CullTransparentMesh: 1
+--- !u!1 &1756027795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1756027796}
+  - component: {fileID: 1756027797}
+  - component: {fileID: 1756027798}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1756027796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756027795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.36857057, y: 1.5410768, z: 9.984556}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1756027797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756027795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1278079127
+      Data2: 1075390563
+      Data3: -321172552
+      Data4: -469354545
+    Path: event:/747941__viramiller__intense-music-for-suspenseful-scenes
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1756027798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756027795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1278079127
+      Data2: 1075390563
+      Data3: -321172552
+      Data4: -469354545
+    Path: event:/747941__viramiller__intense-music-for-suspenseful-scenes
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1786079881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19934,6 +20285,38 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 015035ab962da114a90f458e6d3218b5, type: 2}
   playerInteractionsManager: {fileID: 1578544438}
   martelo: {fileID: 1192778168}
+  emitter: {fileID: 1902576503}
+--- !u!114 &1902576503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902576498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 775950165
+      Data2: 1243034869
+      Data3: 117471419
+      Data4: -509803362
+    Path: event:/quadrooo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1907847597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20795,6 +21178,7 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 015035ab962da114a90f458e6d3218b5, type: 2}
   playerInteractionsManager: {fileID: 1578544438}
   martelo: {fileID: 1192778168}
+  emitter: {fileID: 1989525018}
 --- !u!65 &1989525015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20808,6 +21192,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97988343, y: 0.7376852, z: 0.19935228}
   m_Center: {x: 0.0006875992, y: 0.00057435036, z: 0.0915568}
+--- !u!114 &1989525018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989525013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 775950165
+      Data2: 1243034869
+      Data3: 117471419
+      Data4: -509803362
+    Path: event:/quadrooo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1995404566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7273087425032351647, guid: 2746cc77170c0434c96d64572db649d2, type: 3}
@@ -21067,6 +21482,7 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 0b0e2b3805aa2134db42d832bd6fbb74, type: 2}
   targetPosition: {fileID: 1056147723}
   moveSpeed: 1.6
+  emitter: {fileID: 2004512179}
 --- !u!65 &2004512177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21096,6 +21512,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2004512179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004512175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1954597675
+      Data2: 1177220136
+      Data3: 2079020975
+      Data4: -1829390035
+    Path: event:/caixinha
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2013410473
 GameObject:
   m_ObjectHideFlags: 1

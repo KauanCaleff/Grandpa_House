@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class Martelo : MonoBehaviour, IInteractable
 {
@@ -17,6 +18,8 @@ public class Martelo : MonoBehaviour, IInteractable
     public bool equipped;
 
     private Vector3 initialPosition;
+
+    public StudioEventEmitter emitter;
 
     void Start()
     {
@@ -42,10 +45,12 @@ public class Martelo : MonoBehaviour, IInteractable
         {
             if (!equipped)
             PickUp();
+            emitter.Play();
 
-        else
+        }else{
             Drop();
-        } 
+        }
+         
     }
 
     void PickUp()
@@ -57,7 +62,7 @@ public class Martelo : MonoBehaviour, IInteractable
 
         transform.SetParent(camera);
         transform.localPosition = new Vector3(0.598f, -0.188f, 0.653f); 
-        transform.localRotation = Quaternion.Euler(180f, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(360f, 0f, 0f);
     }
 
     void Drop()

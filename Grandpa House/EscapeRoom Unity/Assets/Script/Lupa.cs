@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
+
 public class Lupa : MonoBehaviour, IInteractable
 {
     [SerializeField] private ScriptableObject scriptableObject;
@@ -16,6 +18,8 @@ public class Lupa : MonoBehaviour, IInteractable
     public bool equipped;
 
     private Vector3 initialPosition;
+
+    public StudioEventEmitter emitter;
 
     void Start()
     {
@@ -39,11 +43,13 @@ public class Lupa : MonoBehaviour, IInteractable
     {
         if (scriptableObject.name == "Lupa")
         {
-            if (!equipped)
+            if (!equipped){
                 PickUp();
-
-            else
+                emitter.Play();
+            }
+            else{
                 Drop();
+            }
         }
     }
 

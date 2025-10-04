@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class Flashlight : MonoBehaviour, IInteractable
 {
@@ -15,6 +16,8 @@ public class Flashlight : MonoBehaviour, IInteractable
     public float dropForwardForce, dropUpwardForce;
 
     public bool equipped;
+
+    public StudioEventEmitter emitter;
 
     void Start()
     {
@@ -37,10 +40,12 @@ public class Flashlight : MonoBehaviour, IInteractable
     {
         if(scriptableObject.name == "Flashlight")
         {
-            if (!equipped)
+            if (!equipped){
             PickUp();
-        else
+            emitter.Play();
+            }else{
             Drop();
+            }
         } 
     }
 

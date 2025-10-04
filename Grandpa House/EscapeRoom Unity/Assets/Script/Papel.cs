@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Papel : MonoBehaviour, IInteractable
 {
@@ -10,6 +11,8 @@ public class Papel : MonoBehaviour, IInteractable
     public Lupa Lupa;
     public PlayerInteractionsManager playerInteractionsManager;
     public bool PapelAberto;
+    public StudioEventEmitter emitter;
+
     public void IInteract()
     {
         if(scriptableObject.name == "Papel" && playerInteractionsManager.interagindo)
@@ -30,11 +33,12 @@ public class Papel : MonoBehaviour, IInteractable
         if(Lupa.equipped == false)
         {
             PapelPImage.SetActive(true);
-
+            emitter.Play();
         }
         else
         {
             PapelGImage.SetActive(true);
+            emitter.Play();
         }
         PapelAberto = true;
     }

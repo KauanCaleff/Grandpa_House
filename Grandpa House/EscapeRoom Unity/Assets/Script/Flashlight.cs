@@ -70,7 +70,7 @@ public class Flashlight : MonoBehaviour, IInteractable
         rb.isKinematic = false;
         coll.isTrigger = false;
 
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
+        rb.velocity = player.GetComponent<PlayerController>().velocity;
 
         rb.AddForce(camera.forward * dropForwardForce, ForceMode.Impulse);
         rb.AddForce(camera.up * dropUpwardForce, ForceMode.Impulse);

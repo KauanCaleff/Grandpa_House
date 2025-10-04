@@ -10509,6 +10509,7 @@ GameObject:
   - component: {fileID: 1076582925}
   - component: {fileID: 1076582928}
   - component: {fileID: 1076582929}
+  - component: {fileID: 1076582930}
   m_Layer: 0
   m_Name: paper
   m_TagString: Untagged
@@ -10599,6 +10600,7 @@ MonoBehaviour:
   Lupa: {fileID: 1665441492}
   playerInteractionsManager: {fileID: 1578544438}
   PapelAberto: 0
+  emitter: {fileID: 1076582930}
 --- !u!65 &1076582929
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10612,6 +10614,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0028925377, y: 0.0016276904, z: 0.0010862614}
   m_Center: {x: 0.000050108425, y: -0.00001783637, z: -0.00012473592}
+--- !u!114 &1076582930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076582924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 84868342
+      Data2: 1155096014
+      Data3: 1297374393
+      Data4: -1171346984
+    Path: event:/papell
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1078214902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12139,7 +12172,7 @@ MonoBehaviour:
   camera: {fileID: 789423449}
   pickUpRange: 4
   dropForwardForce: 0.5
-  dropUpwardForce: 15
+  dropUpwardForce: 10
   equipped: 0
   emitter: {fileID: 1201733313}
 --- !u!4 &1201733309 stripped
@@ -16740,10 +16773,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b05779bb-773d-4de2-9815-c456a4c54a41
     m_ActionName: Player/FlashlightDrop[/Keyboard/f]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 220ef31f-8b49-4273-be35-3e30c15d6551
-    m_ActionName: Player/Inventario[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -16764,12 +16793,13 @@ MonoBehaviour:
   character: {fileID: 1578544434}
   speed: 5
   gravity: -9.81
-  jumpHeight: 0.8
+  jumpHeight: 0.2
   groundMask:
     serializedVersion: 2
     m_Bits: 0
   groundCheck: {fileID: 1901784789}
   groundDistance: 0.4
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!114 &1578544437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18788,6 +18818,7 @@ GameObject:
   - component: {fileID: 1752604032}
   - component: {fileID: 1752604036}
   - component: {fileID: 1752604038}
+  - component: {fileID: 1752604039}
   m_Layer: 0
   m_Name: KeyPad
   m_TagString: Untagged
@@ -18873,6 +18904,7 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: 53134682e8e849a4790be1be8660ce75, type: 2}
   ImageKeypad: {fileID: 158061462}
   Ans: {fileID: 1984338571}
+  emitter: {fileID: 1752604039}
 --- !u!224 &1752604037
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18901,6 +18933,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752604031}
   m_CullTransparentMesh: 1
+--- !u!114 &1752604039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752604031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1097364879
+      Data2: 1290085918
+      Data3: -1801992056
+      Data4: -418223882
+    Path: event:/codigocofre
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1756027795
 GameObject:
   m_ObjectHideFlags: 0
@@ -18980,13 +19043,13 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1278079127
-      Data2: 1075390563
-      Data3: -321172552
-      Data4: -469354545
-    Path: event:/747941__viramiller__intense-music-for-suspenseful-scenes
+      Data1: -48615112
+      Data2: 1085493502
+      Data3: 1502768811
+      Data4: -1902593464
+    Path: event:/oldhouseambience
   Event: 
-  EventPlayTrigger: 0
+  EventPlayTrigger: 1
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -22471,6 +22534,64 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5885894673995095869, guid: 0ad2925a9f42c2144af1ad444231fe3f, type: 3}
+--- !u!114 &2081388306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081388300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13c9118913a0f342bd4cb8cc0e80bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptableObject: {fileID: 11400000, guid: ad4a81c41f14c4c4da9d23e9524a9bd0, type: 2}
+  emitter: {fileID: 2081388307}
+--- !u!114 &2081388307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081388300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1456914667
+      Data2: 1122840204
+      Data3: -1697200479
+      Data4: -2140737432
+    Path: event:/relogio bip
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!65 &2081388308
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081388300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36555776, y: 0.72139615, z: 0.13330528}
+  m_Center: {x: 0.00000011920928, y: -0.010762095, z: 0.066652834}
 --- !u!1001 &2083723524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23701,3 +23822,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptableObject: {fileID: 11400000, guid: 16b9956cdab031f45a3994ec4e678fec, type: 2}
   ImageKeypad: {fileID: 1538530069}
+--- !u!114 &8296172669355001996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669355001989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1163077581
+      Data2: 1110332551
+      Data3: 1112401853
+      Data4: -806919744
+    Path: event:/eletricidade
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

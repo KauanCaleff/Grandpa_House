@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     bool isGrounded;
-    Vector3 velocity;
+    public Vector3 velocity;
 
     // Start is called before the first frame update
     void Start()
@@ -69,4 +69,6 @@ public class PlayerController : MonoBehaviour
     {
         interactableInstance = null;
     }
+
+    
 }

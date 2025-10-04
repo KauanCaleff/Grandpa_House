@@ -17,13 +17,10 @@ public class Lupa : MonoBehaviour, IInteractable
 
     public bool equipped;
 
-    private Vector3 initialPosition;
-
     public StudioEventEmitter emitter;
 
     void Start()
     {
-        initialPosition = transform.position;
         if (!equipped)
         {
             rb.isKinematic = false;
@@ -74,7 +71,7 @@ public class Lupa : MonoBehaviour, IInteractable
         rb.isKinematic = false;
         coll.isTrigger = false;
 
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
+        rb.velocity = player.GetComponent<PlayerController>().velocity;
 
         rb.AddForce(camera.forward * dropForwardForce, ForceMode.Impulse);
         rb.AddForce(camera.up * dropUpwardForce, ForceMode.Impulse);
@@ -83,5 +80,6 @@ public class Lupa : MonoBehaviour, IInteractable
     public void OnDrop(InputAction.CallbackContext value)
     {
         Drop();
+
     }
 }

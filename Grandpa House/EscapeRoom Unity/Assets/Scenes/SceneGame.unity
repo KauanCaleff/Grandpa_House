@@ -9934,6 +9934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009741247}
   - component: {fileID: 1009741248}
+  - component: {fileID: 1009741249}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -9976,6 +9977,23 @@ MonoBehaviour:
   painelSair: {fileID: 1156349274}
   painelTutorial: {fileID: 2086241634}
   pause: {fileID: 1545364766}
+--- !u!320 &1009741249
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009741246}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: ebd6b130d251477409629a0038d389db, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &1015176891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17285,7 +17303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c13573dcd6936fb4ea2c7a27e6eeb289, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.7374024
+      value: -4.793
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c13573dcd6936fb4ea2c7a27e6eeb289, type: 3}
       propertyPath: m_LocalRotation.w

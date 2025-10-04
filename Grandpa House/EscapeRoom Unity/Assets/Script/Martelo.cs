@@ -41,12 +41,15 @@ public class Martelo : MonoBehaviour, IInteractable
     {
         if (scriptableObject.name == "Martelo") 
         {
-            if (!equipped) // Se não está equipado
-                PickUp();  // Equipa o item
-            emitter.Play(); // Toca o som
-        } else
-        {
-            Drop(); // Caso não seja o martelo, solta
+            if (!equipped)
+            {
+                PickUp();
+                emitter.Play();
+            }
+            else
+            {
+                Drop();
+            } // Caso não seja o martelo, solta
         }
     }
 

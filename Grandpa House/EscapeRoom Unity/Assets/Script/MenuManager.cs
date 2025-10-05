@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject painelSair;
     [SerializeField] private GameObject painelTutorial;
     [SerializeField] private GameObject pause;
+    [SerializeField] private PlayableDirector timeline;
 
     void Update()
     {
@@ -86,5 +88,13 @@ public class MenuManager : MonoBehaviour
         painelMenuOpcoes.SetActive(false);
         pause.SetActive(true);
 
+    }
+    public void Final()
+    {
+        // Aqui você marca que já passou pelo jogo
+        PlayerPrefs.SetInt("VoltouDoJogo", 1);
+
+        // Agora carrega a cena que tem a cutscene final
+        SceneManager.LoadScene(CutsceneInicial);
     }
 }

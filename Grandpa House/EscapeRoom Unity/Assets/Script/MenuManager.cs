@@ -68,6 +68,7 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 0;
         painelMenuOpcoes.SetActive(true);
+        painelTutorial.SetActive(false);
         painelSair.SetActive(false);
         pause.SetActive(false);
     }
@@ -91,7 +92,7 @@ public class MenuManager : MonoBehaviour
     }
     public void Final()
     {
-        // Aqui você marca que já passou pelo jogo
+        // Aqui vocï¿½ marca que jï¿½ passou pelo jogo
         PlayerPrefs.SetInt("VoltouDoJogo", 1);
 
         // Agora carrega a cena que tem a cutscene final

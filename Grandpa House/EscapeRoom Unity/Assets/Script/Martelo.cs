@@ -61,8 +61,8 @@ public class Martelo : MonoBehaviour, IInteractable
         coll.isTrigger = true;   
 
         transform.SetParent(camera); // Torna o item filho da câmera (se move junto)
-        transform.localPosition = new Vector3(0.598f, -0.188f, 0.653f); // Ajusta posição na mão
-        transform.localRotation = Quaternion.Euler(360f, 0f, 0f);       // Ajusta rotação na mão
+        transform.localPosition = new Vector3(-0.598f, -0.188f, 0.653f); // Ajusta posição na mão
+        transform.localRotation = Quaternion.Euler(180f, 270f, 0f);       // Ajusta rotação na mão
     }
 
     void Drop()

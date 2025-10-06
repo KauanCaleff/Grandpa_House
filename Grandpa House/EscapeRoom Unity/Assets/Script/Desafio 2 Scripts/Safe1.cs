@@ -10,6 +10,7 @@ public class Safe1 : MonoBehaviour
     public int maxString = 4;
     public GameObject obj;
     public Text uiText;
+    public GameObject luzes;
 
     public GameObject[] buttons = new GameObject[10];
 
@@ -17,6 +18,9 @@ public class Safe1 : MonoBehaviour
     public Transform handleTarget;
     public Transform door;
     public Transform doorTarget;
+
+    private bool isOpened = false;
+    public Papel papel;
 
     private void OnEnable()
     {
@@ -37,9 +41,11 @@ public class Safe1 : MonoBehaviour
         }
     }
 
-    // Função para entradas do novo Input System (teclado ou joystick)
+  
     private void OnKeyboardInput(char c)
     {
+        if (luzes != null && !luzes.activeSelf) return;
+
         if (char.IsDigit(c))
         {
             int digit = c - '0';
@@ -47,9 +53,11 @@ public class Safe1 : MonoBehaviour
         }
     }
 
-    // Função que também será chamada pelos botões da UI (toque na tela)
+
     public void OnButtonPress(string digit)
     {
+        if (luzes != null && !luzes.activeSelf) return;
+
         int d = int.Parse(digit);
         PressButton(digit, d);
     }
@@ -93,6 +101,14 @@ public class Safe1 : MonoBehaviour
 
     void Open()
     {
+        isOpened = true; // bloqueia entradas futuras
+
+        // 🔔 Libera o papel para ser interagido
+        if (papel != null)
+        {
+            papel.LiberarInteracao();
+        }
+        
         handle.rotation = Quaternion.Euler(handle.rotation.x, handle.rotation.y, handleTarget.rotation.eulerAngles.z);
         StartCoroutine(DoorOpen());
     }

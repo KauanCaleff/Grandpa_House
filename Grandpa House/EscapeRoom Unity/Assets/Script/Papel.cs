@@ -5,7 +5,7 @@ using FMODUnity;
 
 public class Papel : MonoBehaviour, IInteractable
 {
-    [SerializeField]private ScriptableObject scriptableObject;
+    [SerializeField] private ScriptableObject scriptableObject;
     public GameObject PapelPImage;
     public GameObject PapelGImage;
     public Lupa Lupa;
@@ -13,13 +13,17 @@ public class Papel : MonoBehaviour, IInteractable
     public bool PapelAberto;
     public StudioEventEmitter emitter;
 
+    public bool interagivel = false;
+
     public void IInteract()
     {
-        if(scriptableObject.name == "Papel" && playerInteractionsManager.interagindo)
+        if (!interagivel) return;
+
+        if (scriptableObject.name == "Papel" && playerInteractionsManager.interagindo)
         {
             InteragirLupa();
         }
-       
+
     }
     void Update()
     {
@@ -30,7 +34,7 @@ public class Papel : MonoBehaviour, IInteractable
     }
     public void InteragirLupa()
     {
-        if(Lupa.equipped == false)
+        if (Lupa.equipped == false)
         {
             PapelPImage.SetActive(true);
             emitter.Play();
@@ -47,5 +51,10 @@ public class Papel : MonoBehaviour, IInteractable
         PapelGImage.SetActive(false);
         PapelPImage.SetActive(false);
         PapelAberto = false;
+    }
+    
+    public void LiberarInteracao()
+    {
+        interagivel = true;
     }
 }

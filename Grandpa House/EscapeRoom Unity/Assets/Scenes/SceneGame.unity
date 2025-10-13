@@ -10466,6 +10466,8 @@ MonoBehaviour:
   maxPoints: 5
   pointsText: {fileID: 905587808}
   levelCompletedUI: {fileID: 1538530069}
+  playerMouse: {fileID: 1578544437}
+  minigameUI: {fileID: 1538530069}
   luzes: {fileID: 608172030}
 --- !u!1 &909639512
 GameObject:
@@ -19296,6 +19298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sensitivity: 30
   Camera: {fileID: 789423449}
+  isLocked: 0
 --- !u!114 &1578544438
 MonoBehaviour:
   m_ObjectHideFlags: 0

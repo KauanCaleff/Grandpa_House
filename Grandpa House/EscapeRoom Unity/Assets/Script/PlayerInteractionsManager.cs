@@ -31,7 +31,7 @@ public class PlayerInteractionsManager : MonoBehaviour
             if (hitinfo.collider.TryGetComponent(out IInteractable interactableObj))
             {
                 Uimanager.Instance.SetHandCursor(true);  // Mostra cursor
-                Uimanager.Instance.SetInteragir(true);
+                //Uimanager.Instance.SetInteragir(true);
                 interagindo = true;
                 return;
             }

@@ -9,28 +9,28 @@ public class Martelo : MonoBehaviour, IInteractable
     
     [SerializeField] private ScriptableObject scriptableObject; 
 
-    public Rigidbody rb;       // Referência ao Rigidbody do item 
-    public BoxCollider coll;   // Collider do item
-    public Transform player;   // Referência ao player
-    public Transform camera;   // Referência à câmera do player
+    public Rigidbody rb;      
+    public BoxCollider coll;   
+    public Transform player;  
+    public Transform camera;   
     
-    public float pickUpRange;         // Alcance para pegar o item
-    public float dropForwardForce;    // Força aplicada para frente ao soltar
-    public float dropUpwardForce;     // Força aplicada para cima ao soltar
+    public float pickUpRange;         
+    public float dropForwardForce;  
+    public float dropUpwardForce;
 
-    public bool equipped; // Indica se o item está equipado
+    public bool equipped; 
 
-    public StudioEventEmitter emitter; // Emissor de som 
+    public StudioEventEmitter emitter;
 
     void Start()
     {
-        if (!equipped) // Se não está equipado no início
+        if (!equipped) 
         {
             rb.isKinematic = false;   
             coll.isTrigger = false;   
         }
 
-        if (equipped) // Se já começa equipado
+        if (equipped)
         {
             rb.isKinematic = true;    
             coll.isTrigger = true;   
@@ -49,40 +49,39 @@ public class Martelo : MonoBehaviour, IInteractable
             else
             {
                 Drop();
-            } // Caso não seja o martelo, solta
+            } 
         }
     }
 
     void PickUp()
     {
-        equipped = true; // Marca como equipado
+        equipped = true; 
 
         rb.isKinematic = true;   
         coll.isTrigger = true;   
 
-        transform.SetParent(camera); // Torna o item filho da câmera (se move junto)
-        transform.localPosition = new Vector3(-0.598f, -0.188f, 0.653f); // Ajusta posição na mão
-        transform.localRotation = Quaternion.Euler(180f, 270f, 0f);       // Ajusta rotação na mão
+        transform.SetParent(camera); 
+        transform.localPosition = new Vector3(-0.598f, -0.188f, 0.653f);
+        transform.localRotation = Quaternion.Euler(180f, 270f, 0f);       
     }
 
     void Drop()
     {
-        equipped = false; // Marca como não equipado
+        equipped = false; 
 
-        transform.SetParent(null); // Remove vínculo com a câmera
+        transform.SetParent(null); 
 
-        rb.isKinematic = false; // Física ligada novamente
-        coll.isTrigger = false; // Collider volta a ser sólido
+        rb.isKinematic = false; 
+        coll.isTrigger = false; 
+        rb.velocity = player.GetComponent<PlayerController>().velocity; 
 
-        rb.velocity = player.GetComponent<PlayerController>().velocity; // Dá a mesma velocidade do player ao soltar
-
-        rb.AddForce(camera.forward * dropForwardForce, ForceMode.Impulse); // Adiciona força para frente
-        rb.AddForce(camera.up * dropUpwardForce, ForceMode.Impulse);       // Adiciona força para cima
+        rb.AddForce(camera.forward * dropForwardForce, ForceMode.Impulse);
+        rb.AddForce(camera.up * dropUpwardForce, ForceMode.Impulse);       
     }
 
     public void OnDrop(InputAction.CallbackContext value)
     {
-        Drop(); // Quando o input de "drop" é acionado, solta o item
+        Drop(); 
     }
 }
 

@@ -9,9 +9,11 @@ public class Mouse : MonoBehaviour
     float xRotation = 0f;
     public Transform Camera;
     private Vector2 Inputmouse;
+    public bool isLocked = false;
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
+        LockMouse();
     }
 
 // Update is called once per frame
@@ -30,5 +32,19 @@ public class Mouse : MonoBehaviour
     {
          Inputmouse = context.ReadValue<Vector2>();
         
+    }
+
+    public void LockMouse()
+    {
+        isLocked = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void UnlockMouse()
+    {
+        isLocked = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

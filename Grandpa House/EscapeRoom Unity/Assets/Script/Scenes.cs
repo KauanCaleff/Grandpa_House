@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Scenes : MonoBehaviour
 {
     public string sceneGame;
+    public string MenuScene;
     public PlayableDirector cutsceneFinal;
     public PlayableDirector cutsceneInicial;
 
@@ -25,13 +26,17 @@ public class Scenes : MonoBehaviour
         else
         {
             Debug.Log("Cutscene inicial ativada!");
-            cutsceneInicial.Play(); // Só toca se for a primeira vez na cena
+            cutsceneInicial.Play(); // Sï¿½ toca se for a primeira vez na cena
         }
     }
 
     public void LoadNextScene()
     {
         SceneManager.LoadScene(sceneGame);
+    }
+    public void LoadSceneenu()
+    {
+        SceneManager.LoadScene(MenuScene);
     }
 
 }

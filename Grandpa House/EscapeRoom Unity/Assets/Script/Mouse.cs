@@ -13,12 +13,14 @@ public class Mouse : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        LockMouse();
+        UnlockMouse();
     }
 
 // Update is called once per frame
     void Update()
     {
+        
+        if (isLocked) return;
         float mouseX = Inputmouse.x * Sensitivity * Time.deltaTime;
         float mouseY = Inputmouse.y * Sensitivity * Time.deltaTime;
         xRotation -= mouseY;

@@ -16,9 +16,13 @@ public class Keypad : MonoBehaviour, IInteractable
     [SerializeField]private TextMeshProUGUI Ans;
     private string answer = "1412";
     public StudioEventEmitter emitter;
+    public Mouse playerMouse;
     public void IInteract()
     {
         ImageKeypad.SetActive(true);
+        if (playerMouse != null){
+            playerMouse.LockMouse();
+        }
     }
     public void Number(int number)
     {
@@ -35,14 +39,19 @@ public class Keypad : MonoBehaviour, IInteractable
             Ans.text = "ERROR  ";
         }
         Invoke("Clear", 2.0f);
+        
     }
     private void Clear()
     {
         Ans.text = "";
+        ImageKeypad.SetActive(false);
+        if (playerMouse != null){
+            playerMouse.UnlockMouse();
+        }
     }
     public void Final()
     {
-        // Aqui você marca que já passou pelo jogo
+        // Aqui vocï¿½ marca que jï¿½ passou pelo jogo
         PlayerPrefs.SetInt("VoltouDoJogo", 1);
 
         // Agora carrega a cena que tem a cutscene final

@@ -11,16 +11,23 @@ public class QuadroEletricidade : MonoBehaviour, IInteractable
 
     public bool interagivel = false;
     public bool quadroAberto;
+    public Mouse playerMouse;
 
     public void IInteract()
     {
         EletricPanel.SetActive(true);
+        if (playerMouse != null){
+            playerMouse.LockMouse();
+        }
     }
 
     public void NaoInteragir()
     {
         EletricPanel.SetActive(false);
         quadroAberto = false;
+        if (playerMouse != null){
+            playerMouse.UnlockMouse();
+        }
     }
 }
 

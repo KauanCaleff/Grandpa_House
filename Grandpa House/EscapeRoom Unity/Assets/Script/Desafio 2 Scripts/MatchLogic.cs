@@ -18,6 +18,7 @@ public class MatchLogic : MonoBehaviour
     public GameObject luzes;
     public GameObject senha;
   
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -47,15 +48,15 @@ public class MatchLogic : MonoBehaviour
         minigameUI.SetActive(true);
 
         if (playerMouse != null)
-            playerMouse.LockMouse(); // trava a câmera e libera o cursor
+            playerMouse.LockMouse(); 
     }
 
-    // 🔌 Quando o jogador fecha o painel elétrico
+
     public void CloseMinigame()
     {
         minigameUI.SetActive(false);
 
         if (playerMouse != null)
-            playerMouse.UnlockMouse(); // destrava a câmera e bloqueia o cursor
+            playerMouse.UnlockMouse(); 
     }
 }

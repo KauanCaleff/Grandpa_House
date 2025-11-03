@@ -5,79 +5,77 @@ using UnityEngine.InputSystem;
 
 public class PlayerController1 : MonoBehaviour
 {
-    [Header("Movimentação")]
-    public float walkSpeed = 3f;
-    public float runSpeed = 6f;
+    private IInteractable interactableInstance;
+    public CharacterController character;
+    public float speed = 5f;
     public float gravity = -9.81f;
-    public float jumpHeight = 1.2f;
-
-    [Header("Verificação de chão")]
-    public Transform groundCheck;
-    public float groundDistance = 0.3f;
+    public float jumpHeight = 3f;
+    private float horizontalInput;
+    private float verticalInput;
     public LayerMask groundMask;
-    private bool isGrounded;
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    bool isGrounded;
+    public Vector3 velocity;
 
-    [Header("Animação")]
-    public Animator animator;
+    private Animator animator;
 
-    private CharacterController controller;
-    private Vector3 velocity;
-    private Vector2 moveInput;
-    private bool isRunning = false;
-
+    // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-        if (animator == null)
-            animator = GetComponentInChildren<Animator>();
+        this.animator = GetComponent<Animator>();
     }
-
+   
+    // Update is called once per frame
     void Update()
     {
-        // Verifica se está no chão
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
+        {
             velocity.y = -2f;
+        }
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+        Vector3 move = transform.right * horizontalInput + transform.forward * verticalInput;
 
-        // Direção do movimento
-        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+        character.Move(move * speed * Time.deltaTime);
 
-        // Velocidade (andar ou correr)
-        float currentSpeed = isRunning ? runSpeed : walkSpeed;
-        controller.Move(move * currentSpeed * Time.deltaTime);
-
-        // Atualiza a velocidade pro Animator
-        animator.SetFloat("Speed", move.magnitude * (isRunning ? 2f : 1f));
-        animator.SetBool("isGrounded", isGrounded);
-
-        // Gravidade
         velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        character.Move(velocity * Time.deltaTime);
+
+        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+
     }
 
-    // Input do movimento (novo Input System)
-    public void OnMove(InputAction.CallbackContext context)
+    public void OnMoveEvent(InputAction.CallbackContext value)
     {
-        moveInput = context.ReadValue<Vector2>();
+        horizontalInput = value.ReadValue<Vector2>().x;
+        verticalInput = value.ReadValue<Vector2>().y;
     }
 
-    // Input de pulo
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
+        velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+    }
+    public void OnTryInteract(InputAction.CallbackContext value)
+    {
+        if(interactableInstance != null)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            animator.SetTrigger("Jump");
+            interactableInstance.IInteract();
         }
     }
+    public void SetIInteractable(IInteractable interactable)
+    {
+        interactableInstance = interactable;
+    }
+    public void ClearIInstance()
+    {
+        interactableInstance = null;
+    }
 
-    // Input de correr (Shift)
-    //public void OnRun(InputAction.CallbackContext context)
-    //{
-    //    if (context.started)
-    //        isRunning = true;
-    //    else if (context.canceled)
-    //        isRunning = false;
-    //}
+    
 }

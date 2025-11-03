@@ -51,10 +51,8 @@ public class Keypad : MonoBehaviour, IInteractable
     }
     public void Final()
     {
-        // Aqui voc� marca que j� passou pelo jogo
         PlayerPrefs.SetInt("VoltouDoJogo", 1);
 
-        // Agora carrega a cena que tem a cutscene final
         SceneManager.LoadScene(CutsceneInicial);
     }
 }

@@ -21,7 +21,7 @@ public class Papel : MonoBehaviour, IInteractable
 
         if (scriptableObject.name == "Papel" && playerInteractionsManager.interagindo)
         {
-            InteragirLupa();
+            InteragirPapel();
         }
 
     }
@@ -32,7 +32,7 @@ public class Papel : MonoBehaviour, IInteractable
             NaoInteragir();
         }
     }
-    public void InteragirLupa()
+    public void InteragirPapel()
     {
         if (Lupa.equipped == false)
         {

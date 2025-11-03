@@ -101,9 +101,8 @@ public class Safe1 : MonoBehaviour
 
     void Open()
     {
-        isOpened = true; // bloqueia entradas futuras
+        isOpened = true; 
 
-        // 🔔 Libera o papel para ser interagido
         if (papel != null)
         {
             papel.LiberarInteracao();

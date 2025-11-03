@@ -11583,6 +11583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Remy@Breathing Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da0034f6c213d914cb0c8eb61e61136e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: da0034f6c213d914cb0c8eb61e61136e, type: 3}
       propertyPath: m_Controller
       value: 
@@ -20031,7 +20035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1586715238
 Transform:
   m_ObjectHideFlags: 0

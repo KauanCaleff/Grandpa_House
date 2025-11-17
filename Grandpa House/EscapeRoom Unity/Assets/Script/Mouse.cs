@@ -22,10 +22,10 @@ public class Mouse : MonoBehaviour
         
         if (isLocked) return;
         float mouseX = Inputmouse.x * Sensitivity * Time.deltaTime;
-        float mouseY = Inputmouse.y * Sensitivity * Time.deltaTime;
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        Camera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        //float mouseY = Inputmouse.y * Sensitivity * Time.deltaTime;
+        //xRotation -= mouseY;
+        //xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        //Camera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
         transform.Rotate(Vector3.up * mouseX);
     }

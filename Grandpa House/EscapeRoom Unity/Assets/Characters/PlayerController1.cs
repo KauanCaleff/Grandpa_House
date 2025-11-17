@@ -58,8 +58,7 @@ public class PlayerController1 : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
-        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+        animator.SetTrigger("Jump");
     }
     public void OnTryInteract(InputAction.CallbackContext value)
     {

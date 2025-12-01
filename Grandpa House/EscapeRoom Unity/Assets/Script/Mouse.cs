@@ -5,35 +5,44 @@ using UnityEngine.InputSystem;
 
 public class Mouse : MonoBehaviour
 {
-    public float Sensitivity = 100f;
-    float xRotation = 0f;
-    public Transform Camera;
-    private Vector2 Inputmouse;
+    [Header("Sensibilidade do Mouse")]
+    public float sensitivityX = 200f;
+    public float sensitivityY = 150f;
+
+    [Header("Referências")]
+    public Transform playerBody;   // Player para rotacionar no eixo Y
+    public Transform cameraPivot;  // Um empty atrás da cabeça onde a câmera fica
+
+    private Vector2 mouseInput;
+    private float verticalRotation = 0f;
+
     public bool isLocked = false;
+
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         UnlockMouse();
     }
 
-// Update is called once per frame
     void Update()
     {
-        
         if (isLocked) return;
-        float mouseX = Inputmouse.x * Sensitivity * Time.deltaTime;
-        //float mouseY = Inputmouse.y * Sensitivity * Time.deltaTime;
-        //xRotation -= mouseY;
-        //xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        //Camera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        transform.Rotate(Vector3.up * mouseX);
+        float mouseX = mouseInput.x * sensitivityX * Time.deltaTime;
+        float mouseY = mouseInput.y * sensitivityY * Time.deltaTime;
+
+        // Rotação horizontal → gira o PLAYER
+        playerBody.Rotate(Vector3.up * mouseX);
+
+        // Rotação vertical → gira o PIVOT da câmera
+        verticalRotation -= mouseY;
+        verticalRotation = Mathf.Clamp(verticalRotation, -45f, 60f); // Ajuste conforme desejar
+
+        cameraPivot.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
     }
 
     public void OnLookEvent(InputAction.CallbackContext context)
     {
-         Inputmouse = context.ReadValue<Vector2>();
-        
+        mouseInput = context.ReadValue<Vector2>();
     }
 
     public void LockMouse()

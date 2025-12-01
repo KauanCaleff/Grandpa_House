@@ -67,13 +67,22 @@ public class KeyInteractable : MonoBehaviour, IInteractable
     private void PickUp()
     {
         Debug.Log("[KeyInteractable] Pegando a chave.");
+        
+        if (player != null)
+        {
+            var controller = player.GetComponent<PlayerController1>();
+            if (controller != null)
+            {
+                controller.PlayPickupAnimation();
+            }
+        }
 
         equipped = true;
 
         rb.isKinematic = true;
         coll.isTrigger = true;
 
-        // ✅ Preferência: colocar na mão
+  
         if (playerPickup == null && player != null)
             playerPickup = player.GetComponent<ObjectPickup>();
 
@@ -83,7 +92,6 @@ public class KeyInteractable : MonoBehaviour, IInteractable
         }
         else
         {
-            // Fallback: cola na câmera se por algum motivo não tiver ObjectPickup
             transform.SetParent(camera);
             transform.localPosition = new Vector3(0.3f, -0.2f, 0.6f);
             transform.localRotation = Quaternion.Euler(0f, 0f, 0f);

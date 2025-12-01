@@ -76,5 +76,19 @@ public class PlayerController1 : MonoBehaviour
         interactableInstance = null;
     }
 
-    
+    public void PlayPickupAnimation()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("Pickup");
+        }
+    }
+
+    public void PlayOpenDoorAnimation()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("OpenDoor");
+        }
+    }
 }

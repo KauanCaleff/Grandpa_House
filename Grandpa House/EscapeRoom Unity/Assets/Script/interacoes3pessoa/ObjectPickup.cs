@@ -17,11 +17,6 @@ public class ObjectPickup : MonoBehaviour
 
     public void AttachToRightHand(Transform target, Vector3 localPos, Vector3 localEuler)
     {
-        if (rightHand == null)
-        {
-            Debug.LogWarning("[ObjectPickup] rightHand não está atribuída no Inspector.");
-            return;
-        }
 
         target.SetParent(rightHand);
         target.localPosition = localPos;

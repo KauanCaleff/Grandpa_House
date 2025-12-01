@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class DoubleDoorInteractions : MonoBehaviour, IInteractable
 {
-    [Header("Referência ao player")]
-    [SerializeField] private ObjectPickup playerPickup;   // arrasta o Player aqui
+    [SerializeField] private ObjectPickup playerPickup;   
 
-    [Header("Folhas da porta")]
-    [SerializeField] private Transform leftDoor;          // folha esquerda
-    [SerializeField] private Transform rightDoor;         // folha direita
+    [SerializeField] private Transform leftDoor;          
+    [SerializeField] private Transform rightDoor;        
 
-    [Header("Config da animação")]
-    public float openAngle = 90f;            // quanto cada folha gira
+    public float openAngle = 90f;            
     public float animationDuration = 0.75f;
 
     private bool isOpen = false;
@@ -25,20 +22,12 @@ public class DoubleDoorInteractions : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        if (leftDoor == null || rightDoor == null)
-        {
-            Debug.LogError("[DoubleDoorInteraction] As referências leftDoor/rightDoor não estão atribuídas!");
-            enabled = false;
-            return;
-        }
 
-        // Guardar rotações fechadas
         leftClosedRot = leftDoor.localRotation;
         rightClosedRot = rightDoor.localRotation;
 
-        // definir rotações abertas (uma pra cada lado)
-        leftOpenRot = leftClosedRot * Quaternion.Euler(0f, -openAngle, 0f);  // abre pra esquerda
-        rightOpenRot = rightClosedRot * Quaternion.Euler(0f, openAngle, 0f); // abre pra direita
+        leftOpenRot = leftClosedRot * Quaternion.Euler(0f, -openAngle, 0f); 
+        rightOpenRot = rightClosedRot * Quaternion.Euler(0f, openAngle, 0f); 
     }
 
     public void IInteract()
@@ -48,19 +37,23 @@ public class DoubleDoorInteractions : MonoBehaviour, IInteractable
 
         if (!isOpen)
         {
-            // porta fechada → tentar abrir
+            var controller = playerPickup.GetComponent<PlayerController1>();
+            if (controller != null)
+            {
+                controller.PlayOpenDoorAnimation();
+            }
+
             if (playerPickup != null && playerPickup.HasKey)
             {
                 StartCoroutine(AnimateDoors(true));
             }
             else
             {
-                Debug.Log("[DoubleDoorInteraction] Porta trancada. Precisa da chave.");
+                Debug.Log("Porta trancada. Precisa da chave.");
             }
         }
         else
         {
-            // porta aberta → fechar
             StartCoroutine(AnimateDoors(false));
         }
     }
@@ -81,7 +74,7 @@ public class DoubleDoorInteractions : MonoBehaviour, IInteractable
         {
             t += Time.deltaTime;
             float normalized = Mathf.Clamp01(t / animationDuration);
-            // suavização tipo smoothstep
+
             float eased = normalized * normalized * (3f - 2f * normalized);
 
             leftDoor.localRotation = Quaternion.Slerp(leftStart, leftTarget, eased);

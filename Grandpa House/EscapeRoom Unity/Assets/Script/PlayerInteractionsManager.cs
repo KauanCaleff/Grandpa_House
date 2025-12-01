@@ -28,13 +28,11 @@ public class PlayerInteractionsManager : MonoBehaviour
         Ray playerAim = new Ray(InteractionsSouce.position, InteractionsSouce.forward);
         if (Physics.Raycast(playerAim, out RaycastHit hitinfo, InteractionRange))
         {
-            // pega IInteractable no próprio objeto OU em algum pai
             IInteractable interactableObj = hitinfo.collider.GetComponentInParent<IInteractable>();
 
             if (interactableObj != null)
             {
-                Uimanager.Instance.SetHandCursor(true);  // Mostra cursor
-                //Uimanager.Instance.SetInteragir(true);
+                Uimanager.Instance.SetHandCursor(true); 
                 interagindo = true;
                 return;
             }

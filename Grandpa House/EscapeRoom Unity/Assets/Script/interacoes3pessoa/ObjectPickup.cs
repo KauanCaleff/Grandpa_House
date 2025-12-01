@@ -6,12 +6,11 @@ public class ObjectPickup : MonoBehaviour
 {
     public Transform rightHand;  
 
-    public bool HasKey { get; private set; }
+    public bool HasKey;
 
     public void SetHasKey(bool value)
     {
         HasKey = value;
-        Debug.Log("[ObjectPickup] HasKey = " + HasKey);
     }
 
     public void AttachToRightHand(Transform target, Vector3 localPos, Vector3 localEuler)

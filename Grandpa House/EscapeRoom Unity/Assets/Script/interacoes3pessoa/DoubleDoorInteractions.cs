@@ -22,7 +22,6 @@ public class DoubleDoorInteractions : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-
         leftClosedRot = leftDoor.localRotation;
         rightClosedRot = rightDoor.localRotation;
 
@@ -32,18 +31,12 @@ public class DoubleDoorInteractions : MonoBehaviour, IInteractable
 
     public void IInteract()
     {
-        if (isAnimating)
-            return;
-
         if (!isOpen)
         {
             var controller = playerPickup.GetComponent<PlayerController1>();
-            if (controller != null)
-            {
-                controller.PlayOpenDoorAnimation();
-            }
-
-            if (playerPickup != null && playerPickup.HasKey)
+            controller.PlayOpenDoorAnimation();
+            
+            if (playerPickup.HasKey)
             {
                 StartCoroutine(AnimateDoors(true));
             }

@@ -40,11 +40,6 @@ public class KeyInteractable : MonoBehaviour, IInteractable
 
     public void IInteract()
     {
-        Debug.Log("[KeyInteractable] IInteract chamado em: " + gameObject.name);
-
-        if (itemData != null && !itemData.grabbable)
-            return;
-
         if (!equipped)
         {
             PickUp();
@@ -53,15 +48,10 @@ public class KeyInteractable : MonoBehaviour, IInteractable
 
     private void PickUp()
     {
-        Debug.Log("[KeyInteractable] Pegando a chave.");
-
         if (player != null)
         {
             var controller = player.GetComponent<PlayerController1>();
-            if (controller != null)
-            {
-                controller.PlayPickupAnimation();
-            }
+            controller.PlayPickupAnimation();
         }
 
         equipped = true;
@@ -69,22 +59,10 @@ public class KeyInteractable : MonoBehaviour, IInteractable
         rb.isKinematic = true;
         coll.isTrigger = true;
 
-  
-        if (playerPickup == null && player != null)
-            playerPickup = player.GetComponent<ObjectPickup>();
+        playerPickup = player.GetComponent<ObjectPickup>();
 
-        if (playerPickup != null)
-        {
-            playerPickup.AttachToRightHand(transform, handLocalPosition, handLocalEulerAngles);
-        }
-        else
-        {
-            transform.SetParent(camera);
-            transform.localPosition = new Vector3(0.3f, -0.2f, 0.6f);
-            transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-        }
-
-        if (playerPickup != null)
-            playerPickup.SetHasKey(true);
+        playerPickup.AttachToRightHand(transform, handLocalPosition, handLocalEulerAngles);
+        
+        playerPickup.SetHasKey(true);
     }
 }

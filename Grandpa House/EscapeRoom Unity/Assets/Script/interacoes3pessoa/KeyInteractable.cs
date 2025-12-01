@@ -7,24 +7,15 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class KeyInteractable : MonoBehaviour, IInteractable
 {
-    [Header("Dados do Item")]
-    [SerializeField] private Item itemData;    // ScriptableObject "Key (Item)"
+    [SerializeField] private Item itemData;    
 
-    [Header("Referências")]
-    public Transform player;                  // arrasta o Player
-    public Transform camera;                  // arrasta a Camera (usado só como fallback)
+    public Transform player;                 
+    public Transform camera;                  
 
-    [Header("Posição na mão")]
     [SerializeField] private Vector3 handLocalPosition = new Vector3(0.05f, 0.0f, 0.0f);
     [SerializeField] private Vector3 handLocalEulerAngles = new Vector3(0f, 0f, 90f);
 
-    [Header("Forças de drop")]
-    public float dropForwardForce = 2f;
-    public float dropUpwardForce = 1f;
-
-    [Header("Estado")]
     public bool equipped;
-
 
     private Rigidbody rb;
     private Collider coll;
@@ -58,16 +49,12 @@ public class KeyInteractable : MonoBehaviour, IInteractable
         {
             PickUp();
         }
-        else
-        {
-            Drop();
-        }
     }
 
     private void PickUp()
     {
         Debug.Log("[KeyInteractable] Pegando a chave.");
-        
+
         if (player != null)
         {
             var controller = player.GetComponent<PlayerController1>();
@@ -99,39 +86,5 @@ public class KeyInteractable : MonoBehaviour, IInteractable
 
         if (playerPickup != null)
             playerPickup.SetHasKey(true);
-    }
-
-    private void Drop()
-    {
-        Debug.Log("[KeyInteractable] Dropando a chave.");
-
-        equipped = false;
-
-        transform.SetParent(null);
-
-        rb.isKinematic = false;
-        coll.isTrigger = false;
-
-        Vector3 vel = Vector3.zero;
-        if (player != null)
-        {
-            var pc1 = player.GetComponent<PlayerController1>();
-            if (pc1 != null)
-                vel = pc1.velocity;
-        }
-
-        rb.velocity = vel;
-
-        rb.AddForce(camera.forward * dropForwardForce, ForceMode.Impulse);
-        rb.AddForce(camera.up * dropUpwardForce, ForceMode.Impulse);
-
-        if (playerPickup != null)
-            playerPickup.SetHasKey(false);
-    }
-
-    public void OnDrop(InputAction.CallbackContext value)
-    {
-        if (equipped)
-            Drop();
     }
 }

@@ -14,10 +14,8 @@ public class ObjectPickup : MonoBehaviour
         Debug.Log("[ObjectPickup] HasKey = " + HasKey);
     }
 
-
     public void AttachToRightHand(Transform target, Vector3 localPos, Vector3 localEuler)
     {
-
         target.SetParent(rightHand);
         target.localPosition = localPos;
         target.localRotation = Quaternion.Euler(localEuler);

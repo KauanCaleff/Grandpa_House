@@ -20125,8 +20125,6 @@ MonoBehaviour:
   camera: {fileID: 2739031448694689695}
   handLocalPosition: {x: 0.05, y: 0, z: 0}
   handLocalEulerAngles: {x: 0, y: 0, z: 90}
-  dropForwardForce: 0
-  dropUpwardForce: 0
   equipped: 0
 --- !u!65 &1699714547
 BoxCollider:
@@ -26016,6 +26014,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 667324820274314972, guid: c8edeb7ae67d7e74e9a1d15e32fa3bfd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.695
+      objectReference: {fileID: 0}
+    - target: {fileID: 667324820274314972, guid: c8edeb7ae67d7e74e9a1d15e32fa3bfd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.81
+      objectReference: {fileID: 0}
     - target: {fileID: 667324820274797829, guid: c8edeb7ae67d7e74e9a1d15e32fa3bfd, type: 3}
       propertyPath: rightHand
       value: 
@@ -26066,6 +26072,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2939328321925107144, guid: c8edeb7ae67d7e74e9a1d15e32fa3bfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170774808903874417, guid: c8edeb7ae67d7e74e9a1d15e32fa3bfd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170774808903874417, guid: c8edeb7ae67d7e74e9a1d15e32fa3bfd, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0.95956004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170774808903874417, guid: c8edeb7ae67d7e74e9a1d15e32fa3bfd, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.015578151
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170774808903874417, guid: c8edeb7ae67d7e74e9a1d15e32fa3bfd, type: 3}
+      propertyPath: m_AABB.m_Extent.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -28,7 +28,10 @@ public class PlayerInteractionsManager : MonoBehaviour
         Ray playerAim = new Ray(InteractionsSouce.position, InteractionsSouce.forward);
         if (Physics.Raycast(playerAim, out RaycastHit hitinfo, InteractionRange))
         {
-            if (hitinfo.collider.TryGetComponent(out IInteractable interactableObj))
+            // pega IInteractable no próprio objeto OU em algum pai
+            IInteractable interactableObj = hitinfo.collider.GetComponentInParent<IInteractable>();
+
+            if (interactableObj != null)
             {
                 Uimanager.Instance.SetHandCursor(true);  // Mostra cursor
                 //Uimanager.Instance.SetInteragir(true);
@@ -36,21 +39,23 @@ public class PlayerInteractionsManager : MonoBehaviour
                 return;
             }
         }
+
         Uimanager.Instance.SetHandCursor(false);
         Uimanager.Instance.SetInteragir(false);
-        interagindo=false;
+        interagindo = false;
     }
 
     private void Interact(InputAction.CallbackContext obj)
     {
         Ray playerAim = new Ray(InteractionsSouce.position, InteractionsSouce.forward);
-        if(Physics.Raycast(playerAim, out RaycastHit hitinfo, InteractionRange))
+        if (Physics.Raycast(playerAim, out RaycastHit hitinfo, InteractionRange))
         {
-            if(hitinfo.collider.TryGetComponent(out IInteractable interactableObj))
+            IInteractable interactableObj = hitinfo.collider.GetComponentInParent<IInteractable>();
+
+            if (interactableObj != null)
             {
                 interactableObj.IInteract();
             }
         }
-        
     }
 }
